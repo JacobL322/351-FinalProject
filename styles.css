@@ -60,9 +60,21 @@ h1, h2 {
 .form-input{
     box-sizing: border-box;
     border:0;
+    border-radius: 1rem;
+    background: #D0C59A;
     width: 100%;
     padding: 1rem 1rem 0.5rem 0.5rem;
-    color: #D0C59A;
+    color: #333;
+}
+
+.form-input::placeholder{
+    display: none;
+    color:transparent;
+}
+
+.form-input:focus{
+    outline:none;
+    border-bottom: 2px solid #6D9775;
 }
 
 /* Search Styles */

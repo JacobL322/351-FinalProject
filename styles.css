@@ -1,4 +1,7 @@
-/* General Styles */
+/* General Styles
+-----------------
+*/
+
 body {
     display: flex;
     align-items: center;
@@ -41,7 +44,10 @@ h1, h2 {
     margin-top: 0px;
 }
 
-/* Login Form Styles */
+/* Login Form Styles
+--------------------
+*/
+
 .login-container {
     margin-top: 5rem;
     padding:2rem;
@@ -110,7 +116,10 @@ h1, h2 {
     color:#6D9775;
 }
 
-/* Search Styles */
+/* Search Form Styles (Temp)
+----------------------------
+*/
+
 .search-container {
     margin-bottom: 40px;
     padding: 20px;
@@ -144,7 +153,10 @@ h1, h2 {
 }
 
 
-/* Hero Styles */
+/* Hero Section Styles (Temp)
+-----------------
+*/
+
 .hero-section {
     background-color: #6D9775;
     padding: 40px 20px;

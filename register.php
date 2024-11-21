@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <form method="POST" action="" class="login-form">
             <div class = "login-row">
-                <label for="username">Username:</label>
+                <label for="username" class = "form-label">Username:</label>
                 <input type="text" class = "form-input" id="username" name="username" required>
             </div>
             <div class = "login-row">

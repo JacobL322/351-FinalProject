@@ -44,6 +44,39 @@ h1, h2 {
     margin-top: 0px;
 }
 
+/* Nav Menu Styles
+--------------------
+*/
+.nav-container{
+    background-color: #D0C59A;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.nav-list{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.nav-item{
+    display:inline;
+}
+
+.nav-link{
+    text-align:center;
+    padding: 1rem 1.5rem;
+    text-decoration:none;
+    color:#333;
+}
+
+.nav-link:hover{
+    cursor:pointer;
+    color:#417154;
+}
+
+
 /* Login Form Styles
 --------------------
 */

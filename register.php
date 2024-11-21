@@ -49,15 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form method="POST" action="" class="login-form">
             <div class = "login-row">
                 <label for="username" class = "form-label">Username:</label>
-                <input type="text" class = "form-input" id="username" name="username" required>
+                <input type="text" class = "form-input" placeholder = "Username" id="username" name="username" required>
             </div>
             <div class = "login-row">
                 <label for="password" class = "form-label">Password:</label>
-                <input type="password" class = "form-input" id="password" name="password" required>
+                <input type="password" class = "form-input" placeholder = "Password" id="password" name="password" required>
             </div>
             <div class = "login-row">
                 <label for="confirm_password" class = "form-label">Confirm Password:</label>
-                <input type="password" class = "form-input" id="confirm_password" name="confirm_password" required>
+                <input type="password" class = "form-input" placeholder = "Password" id="confirm_password" name="confirm_password" required>
             </div>
             <button type="submit" name="register" class = "submit-button">Register</button>
         </form>

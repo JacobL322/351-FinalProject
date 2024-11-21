@@ -39,11 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h1>Login</h1>
             <div class = "login-row">
                 <label for="username" class = "form-label">Username:</label>
-                <input type="text" class = "form-input" id="username" name="username" required>
+                <input type="text" class = "form-input" placeholder = "Username" id="username" name="username" required>
             </div>
             <div class = "login-row">
                 <label for="password" class = "form-label">Password:</label>
-                <input type="password" class = "form-input" id="password" name="password" required>
+                <input type="password" class = "form-input" placeholder = "password" id="password" name="password" required>
             </div>
             <button type="submit" name="login" class = "submit-button">Login</button>
         </form>

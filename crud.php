@@ -70,6 +70,7 @@ $stmt = $pdo->query($sql);
     <meta charset="UTF-8">
     <title>Betty's Resturant Drink Manager</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Hero Section -->

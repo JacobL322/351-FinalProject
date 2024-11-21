@@ -38,6 +38,7 @@ th, td {
 }
 
 h1, h2 {
+    margin-top: 0px;
     margin-bottom: 20px;
 }
 
@@ -47,8 +48,21 @@ h1, h2 {
     padding:2rem;
     text-align: center;
     border-radius: 1rem;
-    background:white;
+    background: #D0C59A;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.login-row {
+    position:relative;
+    margin-bottom: 1rem;
+}
+
+.form-input{
+    box-sizing: border-box;
+    border:0;
+    width: 100%;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+    color: #D0C59A;
 }
 
 /* Search Styles */

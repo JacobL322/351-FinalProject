@@ -160,7 +160,7 @@ $stmt = $pdo->query($sql);
     <!-- Form section with container -->
     <div class="form-container">
         <h2>Add A Drink</h2>
-        <form action="index5.php" method="post">
+        <form action="crud.php" method="post">
             <label for="brand">Brand:</label>
             <input type="text" id="brand" name="brand" required>
             <br><br>

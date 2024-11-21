@@ -52,14 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" class = "form-input" id="username" name="username" required>
             </div>
             <div class = "login-row">
-                <label for="password">Password:</label>
+                <label for="password" class = "form-label">Password:</label>
                 <input type="password" class = "form-input" id="password" name="password" required>
             </div>
             <div class = "login-row">
-                <label for="confirm_password">Confirm Password:</label>
+                <label for="confirm_password" class = "form-label">Confirm Password:</label>
                 <input type="password" class = "form-input" id="confirm_password" name="confirm_password" required>
             </div>
-            <button type="submit" name="register">Register</button>
+            <button type="submit" name="register" class = "submit-button">Register</button>
         </form>
         <p>Already have an account? <a href="login.php">Login here</a></p>
     </div>

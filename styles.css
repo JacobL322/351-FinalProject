@@ -77,6 +77,20 @@ h1, h2 {
     border-bottom: 2px solid #6D9775;
 }
 
+.form-label{
+    color:gray;
+    bottom:0.5rem;
+    left:0;
+    position:absolute;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+
+.form-input:focus~.form-label,
+.form-input:not(:placeholder-shown)~.form-label{
+    opacity: .65;
+    transform: scale(.85) translateY(-1.3rem);
+}
+
 /* Search Styles */
 .search-container {
     margin-bottom: 40px;

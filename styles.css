@@ -73,6 +73,19 @@ h1, h2 {
     border-right: 1.5px outset #417154;
 }
 
+.title-item{
+    display:inline;
+}
+
+.title-item img{
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.nav-item:first-child{
+    border:none;
+}
+
 
 .nav-item:last-child{
     border-right:none;
@@ -83,13 +96,14 @@ h1, h2 {
     text-align:center;
     padding: 1rem 1.5rem;
     text-decoration:none;
-    color:#333;
+    color: #6D9775;
 }
 
 .nav-link:hover{
     cursor:pointer;
     color:#417154;
 }
+
 
 
 /* Login Form Styles

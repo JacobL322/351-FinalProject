@@ -49,8 +49,8 @@ h1, h2 {
 */
 .nav-container{
     background-color: #D0C59A;
-    border-radius: 1rem;
     padding: 1.5rem;
+    width:100%;
 }
 
 .nav-list{
@@ -62,6 +62,12 @@ h1, h2 {
 
 .nav-item{
     display:inline;
+    border-right: 1.5px outset #417154;
+}
+
+
+.nav-item:last-child{
+    border-right:none;
 }
 
 .nav-link{

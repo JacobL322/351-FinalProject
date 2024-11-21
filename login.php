@@ -31,12 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
         <?php if ($error_message): ?>
             <div class="error"><?php echo htmlspecialchars($error_message); ?></div>
         <?php endif; ?>
         
         <form method="POST" action="" class="login-form">
+            <h1>Login</h1>
             <div class = "login-row">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>

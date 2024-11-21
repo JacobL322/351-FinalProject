@@ -106,6 +106,10 @@ h1, h2 {
     background-color: #417154;
 }
 
+.sign-up-text{
+    color:#6D9775;
+}
+
 /* Search Styles */
 .search-container {
     margin-bottom: 40px;

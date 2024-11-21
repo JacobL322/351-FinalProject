@@ -1,19 +1,20 @@
+/* General Styles */
 body {
     font-family: 'Quicksand';
     font-weight: 500;
-    background-color: #E6C9AA;
+    background-color: #6D9775;
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Add a wrapper for the table for better layout control */
 .table-container {
     width: 100%;
-    overflow: hidden;  /* Contains the floated elements */
+    overflow: hidden;
     margin-bottom: 40px;
 }
+
 
 table {
     width: 100%;
@@ -24,19 +25,23 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #E8AE87;
+    border-bottom: 1px solid #6D9775;
 }
 
 .half-width-left-align {
     width: 50%;
-    float: none;  /* Explicitly remove float */
+    float: none;
 }
 
-/* Create a clear break in the layout */
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
 .form-container {
     width: 100%;
-    clear: both;  /* Forces this below floated elements */
-    display: block;  /* Ensures block-level display */
+    clear: both; 
+    display: block; 
 }
 
 form {
@@ -62,14 +67,11 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-h1, h2 {
-    margin-bottom: 20px;
-}
-
+/* Search Styles */
 .search-container {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #E6C9AA;
+    background-color: #6D9775;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -102,10 +104,11 @@ h1, h2 {
     margin-top: 40px;
 }
 
+/* Hero Styles */
 .hero-section {
-    background-color: #E6C9AA;
+    background-color: #6D9775;
     padding: 40px 20px;
-    margin: -20px -20px 40px -20px; /* Negative margin to stretch full width */
+    margin: -20px -20px 40px -20px;
     text-align: center;
     border-bottom: 1px solid #E8AE87;
 }
@@ -127,14 +130,7 @@ h1, h2 {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #E8AE87;
+    background-color: #6D9775;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-/* Rest of your existing styles remain unchanged */
-.table-container {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 40px;
 }

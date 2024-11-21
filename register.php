@@ -32,13 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register - Betty's Book Banning</title>
+    <title>Sign Up - The Animal Archive</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Register</h1>
+    <div class="login-container">
+        <h1>Sign Up</h1>
         <?php if ($error_message): ?>
             <div class="error"><?php echo htmlspecialchars($error_message); ?></div>
         <?php endif; ?>
@@ -46,16 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="success"><?php echo htmlspecialchars($success_message); ?></div>
         <?php endif; ?>
         
-        <form method="POST" action="" class="auth-form">
-            <div>
+        <form method="POST" action="" class="login-form">
+            <div class = "login-row">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-            <div>
+            <div class = "login-row">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <div>
+            <div class = "login-row">
                 <label for="confirm_password">Confirm Password:</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
             </div>

@@ -54,6 +54,7 @@ h1, h2 {
 .login-row {
     position:relative;
     margin-bottom: 0.5rem;
+    background: #D0C59A;
 }
 
 .form-input{
@@ -62,6 +63,7 @@ h1, h2 {
     width: 100%;
     padding: 2rem 1rem 0.5rem 0.5rem;
     color: #333;
+    background: #D0C59A;
 }
 
 .form-input::placeholder{
@@ -86,6 +88,22 @@ h1, h2 {
 .form-input:not(:placeholder-shown)~.form-label{
    opacity: .65;
    transform: scale(.85) translateY(-1.3rem);
+}
+
+.submit-button{
+    color:white;
+    background: #6D9775;
+    border-radius: 2rem;
+    border:0;
+    padding: 0.5rem 2rem;
+    font-size:1.2rem;
+    width: 100%;
+    margin-top:2rem;
+}
+
+.submit-button:hover{
+    cursor:pointer;
+    background-color: #417154;
 }
 
 /* Search Styles */

@@ -35,9 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php if ($error_message): ?>
             <div class="error"><?php echo htmlspecialchars($error_message); ?></div>
         <?php endif; ?>
-        
+
         <form method="POST" action="" class="login-form">
             <h1>Login</h1>
+            <img src="Animal Archive Logo.png" width= "75px" height = "75px">
             <div class = "login-row">
                 <input type="text" class = "form-input" placeholder = "Username" id="username" name="username" required>
                 <label for="username" class = "form-label">Username:</label>

@@ -3,6 +3,7 @@
 */
 
 body {
+    display:flex;
     align-items: center;
     justify-content: center;
     font-family: 'Quicksand';
@@ -11,9 +12,10 @@ body {
     color: #333;
     max-width: 1200px;
     height: 100%;
-    margin: 0;
+    margin:0;
     padding: 0;
 }
+
 
 .table-container {
     width: 100%;
@@ -111,6 +113,8 @@ h1, h2 {
 */
 
 .login-container {
+    display:flex auto;
+    margin:0;
     margin-top: 5rem;
     padding:2rem;
     text-align: center;
@@ -220,7 +224,7 @@ h1, h2 {
 */
 
 .hero-video{
-    display:block;
+    display:block auto;
     position:relative;
     margin-left: 20px;
     height:auto;

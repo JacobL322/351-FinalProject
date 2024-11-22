@@ -226,9 +226,10 @@ h1, h2 {
     height:auto;
     width:100%;
     overflow:hidden;
-    max-width: 800px;
+    max-width: 1200px;
     border:2px solid #333;
-    object-fit: contain;
+    object-position: center;
+    aspect-ratio: 16/9;
 }
 
 .hero-section {

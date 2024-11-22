@@ -3,7 +3,6 @@
 */
 
 body {
-    display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Quicksand';
@@ -219,6 +218,16 @@ h1, h2 {
 /* Hero Section Styles (Temp)
 -----------------
 */
+
+.hero-video{
+    display:block;
+    position:relative;
+    padding:1rem;
+    margin:0 auto;
+    height:auto;
+    max-width: 1200px;
+    overflow:hidden;
+}
 
 .hero-section {
     background-color: #6D9775;

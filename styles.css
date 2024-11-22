@@ -222,14 +222,12 @@ h1, h2 {
 .hero-video{
     display:block;
     position:relative;
-    margin:0 auto;
+    margin-left: 20px;
     height:auto;
+    max-height: 500px;
     width:100%;
     overflow:hidden;
     max-width: 1200px;
-    border:2px solid #333;
-    object-position: center;
-    aspect-ratio: 16/9;
 }
 
 .hero-section {

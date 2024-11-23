@@ -51,11 +51,11 @@ h1, h2 {
 */
 
 .image-gallery{
+    margin:auto;
     position:relative;
     overflow: hidden;
     width: 100%;
     max-width: 1230px;
-    margin: auto;
 }
 
 .image-wrapper{
@@ -75,7 +75,7 @@ h1, h2 {
 }
 
 .image-card:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .image-card img{

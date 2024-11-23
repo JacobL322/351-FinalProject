@@ -84,6 +84,7 @@ h1, h2 {
 }
 
 .gallery-button{
+    opacity:0.5;
     transform: translateY(-50%);
     padding:1rem;
     cursor:pointer;
@@ -91,12 +92,12 @@ h1, h2 {
     border:none;
     position:absolute;
     border-radius:2rem;
-    background-color: #D0C59A;
+    background-color: #333;
     top:50%;
 }
 
 .gallery-button:hover{
-    background-color: #C8B282;
+    background-color: black;
 }
 
 .gallery-button.prev{

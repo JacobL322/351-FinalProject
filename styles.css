@@ -81,6 +81,14 @@ h1, h2 {
 
 .gallery-button{
     transform: translateY(-50%);
+    padding:1rem;
+    cursor:pointer;
+    color: white;
+    border:none;
+    position:absolute;
+    border-radius:2rem;
+    background-color: #D0C59A;
+
 }
 
 

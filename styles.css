@@ -88,7 +88,15 @@ h1, h2 {
     position:absolute;
     border-radius:2rem;
     background-color: #D0C59A;
+    top:50%;
+}
 
+.gallery-button.prev{
+    left:10px;
+}
+
+.gallery-button.next{
+    right:10px;
 }
 
 

@@ -109,7 +109,6 @@ h1, h2 {
 }
 
 
-
 /* Nav Menu Styles
 --------------------
 */
@@ -170,7 +169,6 @@ h1, h2 {
     cursor:pointer;
     color:#417154;
 }
-
 
 
 /* Login Form Styles
@@ -246,6 +244,11 @@ h1, h2 {
 .sign-up-text{
     color:#6D9775;
 }
+
+.sign-up-text:hover{
+    color:#417154
+}
+
 
 /* Search Form Styles (Temp)
 ----------------------------

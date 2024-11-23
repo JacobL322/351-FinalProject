@@ -46,6 +46,24 @@ h1, h2 {
     margin-top: 0px;
 }
 
+/* Image Gallery Styles
+--------------------
+*/
+
+.image-gallery{
+    position:relative;
+}
+
+.image-wrapper{
+    display:flex;
+}
+
+.image-card{
+    overflow:hidden;
+}
+
+
+
 /* Nav Menu Styles
 --------------------
 */

@@ -280,6 +280,7 @@ h1, h2 {
 */
 
 .hero-video{
+    margin-bottom: 200px;
     border-radius: 2rem;
     display:block;
     position:relative;

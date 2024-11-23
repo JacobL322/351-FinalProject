@@ -74,6 +74,10 @@ h1, h2 {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
+.image-card:hover{
+    transform: scale(1.05);
+}
+
 .image-card img{
     display:block;
     width:100%;
@@ -89,6 +93,10 @@ h1, h2 {
     border-radius:2rem;
     background-color: #D0C59A;
     top:50%;
+}
+
+.gallery-button:hover{
+    background-color: #C8B282;
 }
 
 .gallery-button.prev{

@@ -52,10 +52,15 @@ h1, h2 {
 
 .image-gallery{
     position:relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .image-wrapper{
     display:flex;
+
 }
 
 .image-card{

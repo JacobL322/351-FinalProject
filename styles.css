@@ -17,6 +17,13 @@ body {
     flex-direction: column;
 }
 
+h2{
+    text-align: center;
+    font-size:2rem;
+    text-shadow: 1px 1px black;
+    color:white;
+}
+
 
 .table-container {
     width: 100%;
@@ -86,16 +93,18 @@ h1, h2 {
 }
 
 .card-caption{
+    text-shadow: 1px 1px black;
+    background: rgba(0, 0, 0, 0.06);
     bottom:0;
     left:0;
     position:absolute;
     width:100%;
     color:white;
     text-align:center;
-    font-size:1rem;
+    font-size:1.5rem;
     transform:translateY(100%);
     transition: transform 0.3s ease-in-out;
-    padding:0.5em;
+    padding:1em;
 }
 
 .image-card:hover .card-caption{
@@ -312,7 +321,7 @@ h1, h2 {
 */
 
 .hero-video{
-    margin-bottom: 175px;
+    margin-bottom: 50px;
     border-radius: 2rem;
     display:block;
     position:relative;

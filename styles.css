@@ -66,6 +66,7 @@ h1, h2 {
 }
 
 .image-card{
+    position: relative;
     overflow:hidden;
     margin:10px;
     min-width: 600px;
@@ -92,8 +93,9 @@ h1, h2 {
     color:white;
     text-align:center;
     font-size:1rem;
-    transform:translateY(100);
+    transform:translateY(100%);
     transition: transform 0.3s ease-in-out;
+    padding:0.5em;
 }
 
 .image-card:hover .card-caption{

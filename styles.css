@@ -53,11 +53,24 @@ h1, h2 {
     margin-top: 0px;
 }
 
+
+/* Animal of the Week Styles
+--------------------
+*/
+
+.animal-week-image{
+    border-radius:3em;
+    float:left;
+    height:500px;
+    width:700px;
+}
+
 /* Image Gallery Styles
 --------------------
 */
 
 .image-gallery{
+    background-color: #417154;
     margin:auto;
     position:relative;
     overflow: hidden;

@@ -63,6 +63,12 @@ h1, h2 {
 /* Animal of the Week Styles
 --------------------
 */
+.animal-week{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+}
+
 
 .animal-week-image{
     padding:1em;

@@ -87,7 +87,7 @@ h1, h2 {
 }
 
 .footer-input{
-    border-radius:1em;
+    border-radius:0.5em;
     float:right;
     display:inline;
     box-sizing: border-box;

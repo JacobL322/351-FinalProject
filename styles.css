@@ -63,6 +63,21 @@ h1, h2 {
 --------------------
 */
 
+.mission-section{
+    text-align:center;
+    background-color:#417154;
+    border-radius:1.5em;
+    margin:auto;
+    padding:1em;
+
+}
+
+
+
+/* Footer Styles
+--------------------
+*/
+
 .footer-container{
     box-sizing:border-box;
     align-items: center;

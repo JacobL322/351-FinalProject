@@ -73,6 +73,20 @@ $stmt = $pdo->query($sql);
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+            <div class = "nav-container">
+                <ul class = "nav-list">
+                    <li class = "title-item">The Animal Archive</li>
+                    <li class = "title-item"><img src="Animal Archive Logo.png" width="35px" height = "35px"></li>
+                    <li class = "nav-item"><a href = "index.html" class = "nav-link">Home</a></li>
+                    <li class = "nav-item"><a href = "about.html" class = "nav-link">About</a></li>
+                    <li class = "nav-item"><a href = "login.php" class = "nav-link">Archive</a></li>
+                </ul>
+            </div>
+        </header>
+
+
     <!-- Hero Section -->
     <div class="hero-section">
         <h1 class="hero-title">Betty's Resturant Drink Manager</h1>
@@ -174,5 +188,18 @@ $stmt = $pdo->query($sql);
             <input type="submit" value="Add Drink to Menu">
         </form>
     </div>
+    <footer>
+        <div class = "footer-container">
+            <ul class = "footer-list">
+                <li class = "nav-item"><h4>Join Our Email List To Recieve Updates!</h4></li>
+                <li class = "nav-item">
+                    <form  method = "POST" action ="" class = "footer-form">
+                        <input type="email" class = "footer-input" placeholder = "email" id="email" name="email">
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <br>
+    </footer>
 </body>
 </html>

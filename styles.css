@@ -84,29 +84,19 @@ h1, h2 {
 }
 
 .footer-list{
-    display:flex;
+    display:inline;
     align-items: center;
-    justify-content: space-between;
     list-style-type: none;
     margin:0 auto;
     padding:0;
     overflow: hidden;
 }
 
-.footer-list li{
-    display:inline-block;
-    align-items: center;
-}
-
 .footer-form{
-    display:inline-block;
     margin:0;
+    float:right;
 }
 
-.nav-item{
-    display:inline;
-    border-right: 1.5px outset #417154;
-}
 
 /* Animal of the Week Styles
 --------------------

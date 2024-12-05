@@ -200,6 +200,7 @@ $stmt = $pdo->query($sql);
                 </li>
             </ul>
         </div>
+        <p style = "text-align:center; color:white;">© 2024 Animal Archive. All rights reserved.</p>
         <br>
     </footer>
 </body>

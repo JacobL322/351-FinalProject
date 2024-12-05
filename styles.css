@@ -129,6 +129,8 @@ h1, h2 {
 */
 
 .animal-week{
+    border: 2px solid #C8B282;
+    background-color: #417154;
     margin-left:auto;
     margin-right:auto;
     margin-top:100px;
@@ -179,6 +181,7 @@ h1, h2 {
 */
 
 .image-gallery{
+    border: 2px solid #C8B282;
     background-color: #417154;
     margin: 0 auto;
     position:relative;
@@ -195,10 +198,12 @@ h1, h2 {
 }
 
 .image-card{
+    border: 2px solid #C8B282;
     position: relative;
     overflow:hidden;
-    margin:10px;
+    margin: 10px;
     min-width: 600px;
+    max-width: 600px;
     background: white;
     border-radius: 4rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -443,6 +448,7 @@ h1, h2 {
 */
 
 .hero-video{
+    border: 2px solid #C8B282;
     margin-bottom: 50px;
     border-radius: 2rem;
     display:block;

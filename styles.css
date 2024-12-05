@@ -187,6 +187,7 @@ h1, h2 {
 
 .image-gallery{
     border: 2px solid #C8B282;
+    border-right:none;
     background-color: #417154;
     position:relative;
     overflow: hidden;
@@ -197,18 +198,21 @@ h1, h2 {
 }
 
 .image-wrapper{
-    object-fit: cover;
+    max-width: 1200px;
+    width:100%;
     display:flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
 
 .image-card{
-    padding:0;
+    box-sizing: border-box;
     border: 2px solid #C8B282;
     position: relative;
     overflow:hidden;
-    margin: 10px;
+    margin:8px;
+    margin-right:5px;
+    margin-left:2px;
     min-width: 600px;
     background: white;
     border-radius: 4rem;

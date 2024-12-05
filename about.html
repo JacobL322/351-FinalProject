@@ -30,24 +30,29 @@
             <h3>The Animal Archive is dedicated to education, environmental advocacy, and animal conservation. Our archive is updated weekly, ensuring constant growth in our animal data. Members can login and add their own animals, providing an outlet for people to educate others about the wildlife they themselves admire.</h3>
         </div>
         <br>
-
-
-        <div class="login-container">
-            <form method="POST" action="" class="login-form">
-                <h1>Login</h1>
-                <img src="Animal Archive Logo.png" width= "75px" height = "75px">
-                <div class = "login-row">
-                    <input type="text" class = "form-input" placeholder = "Username" id="username" name="username" required>
-                    <label for="username" class = "form-label">Username:</label>
-                </div>
-                <div class = "login-row">
-                    <input type="password" class = "form-input" placeholder = "password" id="password" name="password" required>
-                    <label for="password" class = "form-label">Password:</label>
-                </div>
-                <button type="submit" name="login" class = "submit-button">Login</button>
-            </form>
-
     </main>
+
+    <div class="request-container">
+        <form method="POST" action="" class="login-form">
+            <h1>Don't See An Animal You Like?</h1>
+            <h1>Suggest Them Here!</h1>
+            <img src="Animal Archive Logo.png" width= "75px" height = "75px">
+            <div class = "request-row">
+                <input type="text" class = "form-input" placeholder = "Animal" id="animal" name="animal" required>
+                <label for="animal" class = "form-label">Animal:</label>
+            </div>
+            <div class = "request-row">
+                <input type="text" class = "form-input" placeholder = "Other Animal" id="animal2" name="animal2">
+                <label for="animal2" class = "form-label">Animal 2 (Optional):</label>
+            </div>
+            <div class = "request-row">
+                <input type="text" class = "form-input" placeholder = "Other Animal" id="animal3" name="animal3">
+                <label for="animal3" class = "form-label">Animal 3 (Optional):</label>
+            </div>
+            <button type="submit" name="submit" class = "submit-button">Submit</button>
+        </form>
+    </div>
+    <br><br><br>
 
     <footer>
         <div class = "footer-container">

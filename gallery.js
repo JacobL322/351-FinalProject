@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector(".gallery-button.next");
 
     let currentIndex = 0; // To track the current position
-    const cardWidth = 624; // Width of each card + margin (adjust if necessary)
+    const cardWidth = 607; // Width of each card + margin (adjust if necessary)
     const visibleCards = Math.floor(document.querySelector(".image-gallery").offsetWidth / cardWidth);
     const totalCards = document.querySelectorAll(".image-card").length;
 

@@ -10,7 +10,7 @@ if (!is_logged_in()) {
 }
 
 $host = 'localhost'; 
-$dbname = 'drinks'; 
+$dbname = 'animals'; 
 $user = 'jacob'; 
 $pass = 'jacob';
 $charset = 'utf8mb4';
@@ -32,7 +32,7 @@ try {
 $search_results = null;
 if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_term = '%' . $_GET['search'] . '%';
-    $search_sql = 'SELECT drink_id, brand, cup_size, price FROM data WHERE brand LIKE :search';
+    $search_sql = 'SELECT animal_id, name, scientific_name, habitat FROM animals WHERE name LIKE :search';
     $search_stmt = $pdo->prepare($search_sql);
     $search_stmt->execute(['search' => $search_term]);
     $search_results = $search_stmt->fetchAll();
@@ -40,27 +40,27 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['brand']) && isset($_POST['cup_size']) && isset($_POST['price'])) {
+    if (isset($_POST['name']) && isset($_POST['scientific_name']) && isset($_POST['habitat'])) {
         // Insert new entry
-        $brand = htmlspecialchars($_POST['brand']);
-        $cup_size = htmlspecialchars($_POST['cup_size']);
-        $price = htmlspecialchars($_POST['price']);
+        $name = htmlspecialchars($_POST['name']);
+        $scientific_name = htmlspecialchars($_POST['scientific_name']);
+        $habitat = htmlspecialchars($_POST['habitat']);
         
-        $insert_sql = 'INSERT INTO data (brand, cup_size, price) VALUES (:brand, :cup_size, :price)';
+        $insert_sql = 'INSERT INTO animals (name, scientific_name, habitat) VALUES (:name, :scientific_name, :habitat)';
         $stmt_insert = $pdo->prepare($insert_sql);
-        $stmt_insert->execute(['brand' => $brand, 'cup_size' => $cup_size, 'price' => $price]);
-    } elseif (isset($_POST['delete_drink_id'])) {
+        $stmt_insert->execute(['name' => $name, 'scientific_name' => $scientific_name, 'habitat' => $habitat]);
+    } elseif (isset($_POST['delete_animal_id'])) {
         // Delete an entry
-        $delete_drink_id = (int) $_POST['delete_drink_id'];
+        $delete_animal_id = (int) $_POST['delete_animal_id'];
         
-        $delete_sql = 'DELETE FROM data WHERE drink_id = :drink_id';
+        $delete_sql = 'DELETE FROM animals WHERE animal_id = :animal_id';
         $stmt_delete = $pdo->prepare($delete_sql);
-        $stmt_delete->execute(['drink_id' => $delete_drink_id]);
+        $stmt_delete->execute(['animal_id' => $delete_animal_id]);
     }
 }
 
-// Get all data for main table
-$sql = 'SELECT drink_id, brand, cup_size, price FROM data';
+// Get all animals for main table
+$sql = 'SELECT animal_id, name, scientific_name, habitat FROM animals';
 $stmt = $pdo->query($sql);
 ?>
 
@@ -90,14 +90,13 @@ $stmt = $pdo->query($sql);
 
     <!-- Hero Section -->
     <div class="hero-section">
-        <h1 class="hero-title">Betty's Resturant Drink Manager</h1>
-        <p class="hero-subtitle">"Because nothing brings a community together like highly carbonated and sugary beverages!"</p>
+        <h1 class="hero-title">The Animal Archive</h1>
         
         <!-- Search moved to hero section -->
         <div class="hero-search">
-            <h2>Search for Drink</h2>
+            <h2>Search for Animal</h2>
             <form action="" method="GET" class="search-form">
-                <label for="search">Search by Brand:</label>
+                <label for="search">Search by name:</label>
                 <input type="text" id="search" name="search" required>
                 <input type="submit" value="Search">
             </form>
@@ -110,22 +109,22 @@ $stmt = $pdo->query($sql);
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Brand</th>
-                                    <th>Sizes</th>
-                                    <th>Price</th>
+                                    <th>Name</th>
+                                    <th>Scientific Name</th>
+                                    <th>Habitat</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($search_results as $row): ?>
                                 <tr>
-                                    <td><?php echo htmlspecialchars($row['drink_id']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['brand']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['cup_size']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['price']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['animal_id']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['habitat']); ?></td>
                                     <td>
-                                        <form action="index5.php" method="post" style="display:inline;">
-                                            <input type="hidden" name="delete_drink_id" value="<?php echo $row['drink_id']; ?>">
+                                        <form action="index.php" method="post" style="display:inline;">
+                                            <input type="hidden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
                                             <input type="submit" value="Remove">
                                         </form>
                                     </td>
@@ -134,7 +133,7 @@ $stmt = $pdo->query($sql);
                             </tbody>
                         </table>
                     <?php else: ?>
-                        <p>No data found matching your search.</p>
+                        <p>No animals found matching your search.</p>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -143,27 +142,27 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h2>All drinks in Database</h2>
+        <h2>All animals in database</h2>
         <table class="half-width-left-align">
             <thead>
                 <tr>
-                    <th>drink_id</th>
-                    <th>brand</th>
-                    <th>cup_size</th>
-                    <th>price</th>
+                    <th>animal_id</th>
+                    <th>name</th>
+                    <th>scientific_name</th>
+                    <th>habitat</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = $stmt->fetch()): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($row['drink_id']); ?></td>
-                    <td><?php echo htmlspecialchars($row['brand']); ?></td>
-                    <td><?php echo htmlspecialchars($row['cup_size']); ?></td>
-                    <td><?php echo htmlspecialchars($row['price']); ?></td>
+                    <td><?php echo htmlspecialchars($row['animal_id']); ?></td>
+                    <td><?php echo htmlspecialchars($row['name']); ?></td>
+                    <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
+                    <td><?php echo htmlspecialchars($row['habitat']); ?></td>
                     <td>
-                        <form action="index5.php" method="post" style="display:inline;">
-                            <input type="hdrink_idden" name="delete_drink_id" value="<?php echo $row['drink_id']; ?>">
+                        <form action="index.php" method="post" style="display:inline;">
+                            <input type="hanimal_idden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
                             <input type="submit" value="Remove">
                         </form>
                     </td>
@@ -175,18 +174,18 @@ $stmt = $pdo->query($sql);
 
     <!-- Form section with container -->
     <div class="form-container">
-        <h2>Add A Drink</h2>
+        <h2>Add An Animal</h2>
         <form action="crud.php" method="post">
-            <label for="brand">Brand:</label>
-            <input type="text" id="brand" name="brand" required>
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" required>
             <br><br>
-            <label for="cup_size">Sizes:</label>
-            <input type="text" id="cup_size" name="cup_size" required>
+            <label for="scientific_name">Sizes:</label>
+            <input type="text" id="scientific_name" name="scientific_name" required>
             <br><br>
-            <label for="price">Price:</label>
-            <input type="float" id="price" name="price" required>
+            <label for="habitat">habitat:</label>
+            <input type="text" id="habitat" name="habitat" required>
             <br><br>
-            <input type="submit" value="Add Drink to Menu">
+            <input type="submit" value="Add Animal to Archive">
         </form>
     </div>
     <footer>

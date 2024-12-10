@@ -98,7 +98,7 @@ $stmt = $pdo->query($sql);
                 <div class = "request-row">
                     <input class = "form-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
                     <label class = "form-label" for="search">Animal Name:</label>
-                    <input type="submit" value="Search">
+                    <button class = "hero-button" type="submit"><img src = "Search.png"></button>
                 </div>
             </form>
         </div>
@@ -149,7 +149,7 @@ $stmt = $pdo->query($sql);
     <!-- Table section with container -->
     <div class="table-container">
         <br>
-        <h1 style = "text-align: center">All Animals in Archive</h1>
+        <h1 style = "text-align: center">Full Archive</h1>
         <table class="half-width-left-align">
             <thead>
                 <tr class = "crud-tr">

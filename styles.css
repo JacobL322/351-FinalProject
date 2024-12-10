@@ -51,7 +51,7 @@ th, td {
 }
 
 .half-width-left-align {
-    width: 90%;
+    width: 95%;
     float:none;
     margin-left:auto;
     margin-right:auto;
@@ -89,6 +89,7 @@ h1, h2 {
 }
 
 .crud-button{
+    align-items: center;
     color:white;
     background: #6D9775;
     border-radius: 2rem;
@@ -98,6 +99,16 @@ h1, h2 {
     width: 100%;
     margin-top:1em;
     margin-bottom:20px;
+}
+
+.hero-button{
+    padding:0;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    width:60px;
+    height:60px;
+    background-color:#D0C59A;
 }
 
 /* Mission Section
@@ -377,7 +388,7 @@ h1, h2 {
     text-align:center;
     padding: 1rem 1.5rem;
     text-decoration:none;
-    color: #6D9775;
+    color: #333;
 }
 
 .nav-link:hover{
@@ -521,6 +532,7 @@ h1, h2 {
     border:2px solid #C8B282;
     border-radius:1rem;
 }
+
 
 .search-results h3 {
     margin-bottom: 15px;

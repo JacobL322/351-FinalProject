@@ -28,9 +28,22 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
+
 $animal_id = (int)$_GET['animal_id'];
 
+//Fetch Animal
 $sql = 'SELECT * FROM animals WHERE animal_id = :animal_id';
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['animal_id' => $animal_id]);
 $animal = $stmt->fetch();
+
+// Handle form submission for updating
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $scientific_name = htmlspecialchars($_POST['scientific_name']);
+    $habitat = htmlspecialchars($_POST['habitat']);
+    $diet = htmlspecialchars($_POST['diet']);
+    $conservation_status = htmlspecialchars($_POST['conservation_status']);
+    $fun_fact = htmlspecialchars($_POST['fun_fact']);
+}
+

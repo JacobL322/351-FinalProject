@@ -94,13 +94,12 @@ $stmt = $pdo->query($sql);
         <!-- Search moved to hero section -->
          <br><br>
         <div class="hero-search">
-            <h1 style = "text-align:center">Search for Animal</h1>
             <form action="" method="GET" class="search-form">
                 <div class = "request-row">
                     <input class = "form-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
                     <label class = "form-label" for="search">Animal Name:</label>
+                    <input type="submit" value="Search">
                 </div>
-                <input class = "submit-button" type="submit" value="Search">
             </form>
         </div>
             
@@ -110,31 +109,29 @@ $stmt = $pdo->query($sql);
                     <?php if ($search_results && count($search_results) > 0): ?>
                         <table>
                             <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Scientific Name</th>
-                                    <th>Habitat</th>
-                                    <th>Diet</th>
-                                    <th>Conservation Status</th>
-                                    <th>Fun Fact</th>
-                                    <th>Actions</th>
+                                <tr class = "crud-tr">
+                                    <th class = "crud-th">Name</th>
+                                    <th class = "crud-th">Scientific Name</th>
+                                    <th class = "crud-th">Habitat</th>
+                                    <th class = "crud-th">Diet</th>
+                                    <th class = "crud-th">Conservation Status</th>
+                                    <th class = "crud-th">Fun Fact</th>
+                                    <th class = "crud-th">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($search_results as $row): ?>
-                                <tr>
-                                    <td><?php echo htmlspecialchars($row['animal_id']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['name']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['habitat']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['diet']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['conservation_status']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['fun_fact']); ?></td>
-                                    <td>
+                                <tr class = "crud-tr">
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['name']); ?></td>
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['scientific_name']); ?></td>
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['habitat']); ?></td>
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['diet']); ?></td>
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['conservation_status']); ?></td>
+                                    <td class = "crud-td"><?php echo htmlspecialchars($row['fun_fact']); ?></td>
+                                    <td class = "crud-td">
                                         <form action="crud.php" method="post" style="display:inline;">
                                             <input type="hidden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
-                                            <input class = "submit-button" type="submit" value="Remove">
+                                            <input class = "crud-button" type="submit" value="Remove">
                                         </form>
                                     </td>
                                 </tr>

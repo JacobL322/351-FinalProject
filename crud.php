@@ -90,18 +90,17 @@ $stmt = $pdo->query($sql);
             </div>
         </header>
 
-
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <h1 class="hero-title">The Animal Archive</h1>
         
         <!-- Search moved to hero section -->
+         <br><br>
         <div class="hero-search">
-            <h2>Search for Animal</h2>
+            <h1 style = "text-align:center">Search for Animal</h1>
             <form action="" method="GET" class="search-form">
-                <label for="search">Search by name:</label>
-                <input type="text" id="search" name="search" required>
-                <input type="submit" value="Search">
+                <div class = "request-row">
+                    <label class = "form-label" for="search">Animal Name</label>
+                    <input class = "form-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
+        </div>
+                <input class = "submit-button" type="submit" value="Search">
             </form>
             
             <?php if (isset($_GET['search'])): ?>
@@ -151,7 +150,7 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h2>All animals in database</h2>
+        <h1 style = "text-align: center">All animals in Archive</h1>
         <table class="half-width-left-align">
             <thead>
                 <tr>
@@ -185,6 +184,7 @@ $stmt = $pdo->query($sql);
                 <?php endwhile; ?>
             </tbody>
         </table>
+        <br>
     </div>
 
     <!-- Form section with container -->

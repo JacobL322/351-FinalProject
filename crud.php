@@ -151,34 +151,33 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h1 style = "text-align: center">All animals in Archive</h1>
+        <br>
+        <h1 style = "text-align: center">All Animals in Archive</h1>
         <table class="half-width-left-align">
             <thead>
-                <tr>
-                    <th>animal_id</th>
-                    <th>Name</th>
-                    <th>Scientific Name</th>
-                    <th>Habitat</th>
-                    <th>Diet</th>
-                    <th>Conservation Status</th>
-                    <th>Fun Fact</th>
-                    <th>Actions</th>
+                <tr class = "crud-tr">
+                    <th class = "crud-th">Name</th>
+                    <th class = "crud-th">Scientific Name</th>
+                    <th class = "crud-th">Habitat</th>
+                    <th class = "crud-th">Diet</th>
+                    <th class = "crud-th">Conservation Status</th>
+                    <th class = "crud-th">Fun Fact</th>
+                    <th class = "crud-th">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = $stmt->fetch()): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['animal_id']); ?></td>
-                    <td><?php echo htmlspecialchars($row['name']); ?></td>
-                    <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
-                    <td><?php echo htmlspecialchars($row['habitat']); ?></td>
-                    <td><?php echo htmlspecialchars($row['diet']); ?></td>
-                    <td><?php echo htmlspecialchars($row['conservation_status']); ?></td>
-                    <td><?php echo htmlspecialchars($row['fun_fact']); ?></td>
-                    <td>
-                        <form action="index.php" method="post" style="display:inline;">
-                            <input type="hanimal_idden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
-                            <input class = "submit-button" type="submit" value="Remove">
+                <tr class = "crud-tr">
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['name']); ?></td>
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['scientific_name']); ?></td>
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['habitat']); ?></td>
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['diet']); ?></td>
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['conservation_status']); ?></td>
+                    <td class = "crud-td"><?php echo htmlspecialchars($row['fun_fact']); ?></td>
+                    <td class = "crud-td">
+                        <form action="crud.php" method="post" style="display:inline;">
+                            <input type="hidden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
+                            <input class = "crud-button" type="submit" value="Remove">
                         </form>
                     </td>
                 </tr>

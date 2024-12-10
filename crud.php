@@ -28,7 +28,7 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-// Handle book search
+// Handle Animal Search
 $search_results = null;
 if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_term = '%' . $_GET['search'] . '%';
@@ -38,7 +38,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_results = $search_stmt->fetchAll();
 }
 
-// Handle form submissions
+// Handle Form submissions
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['name']) && isset($_POST['scientific_name']) && isset($_POST['habitat']) && isset($_POST['diet']) && isset($_POST['conservation_status']) && isset($_POST['fun_fact'])) {
         // Insert new entry
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Get all animals for main table
+// Get all Animals for main table
 $sql = 'SELECT animal_id, name, scientific_name, habitat, diet, conservation_status, fun_fact FROM animals';
 $stmt = $pdo->query($sql);
 ?>

@@ -32,7 +32,7 @@ try {
 $search_results = null;
 if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_term = '%' . $_GET['search'] . '%';
-    $search_sql = 'SELECT animal_id, name, scientific_name, habitat FROM animals WHERE name LIKE :search';
+    $search_sql = 'SELECT animal_id, name, scientific_name, habitat, diet, conservation_status, fun_fact FROM animals WHERE name LIKE :search';
     $search_stmt = $pdo->prepare($search_sql);
     $search_stmt->execute(['search' => $search_term]);
     $search_results = $search_stmt->fetchAll();
@@ -40,15 +40,18 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['name']) && isset($_POST['scientific_name']) && isset($_POST['habitat'])) {
+    if (isset($_POST['name']) && isset($_POST['scientific_name']) && isset($_POST['habitat']) && isset($_POST['diet']) && isset($_POST['conservation_status']) && isset($_POST['fun_fact'])) {
         // Insert new entry
         $name = htmlspecialchars($_POST['name']);
         $scientific_name = htmlspecialchars($_POST['scientific_name']);
         $habitat = htmlspecialchars($_POST['habitat']);
+        $diet = htmlspecialchars($_POST['diet']);
+        $conservation_status = htmlspecialchars($_POST['conservation_status']);
+        $fun_fact = htmlspecialchars($_POST['fun_fact']);
         
-        $insert_sql = 'INSERT INTO animals (name, scientific_name, habitat) VALUES (:name, :scientific_name, :habitat)';
+        $insert_sql = 'INSERT INTO animals (name, scientific_name, habitat, diet, conservation_status, fun_fact) VALUES (:name, :scientific_name, :habitat, :diet, :conservation_status, :fun_fact)';
         $stmt_insert = $pdo->prepare($insert_sql);
-        $stmt_insert->execute(['name' => $name, 'scientific_name' => $scientific_name, 'habitat' => $habitat]);
+        $stmt_insert->execute(['name' => $name, 'scientific_name' => $scientific_name, 'habitat' => $habitat, 'diet' => $diet, 'conservation_status' => $conservation_status, 'fun_fact' => $fun_fact]);
     } elseif (isset($_POST['delete_animal_id'])) {
         // Delete an entry
         $delete_animal_id = (int) $_POST['delete_animal_id'];
@@ -60,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Get all animals for main table
-$sql = 'SELECT animal_id, name, scientific_name, habitat FROM animals';
+$sql = 'SELECT animal_id, name, scientific_name, habitat, diet, conservation_status, fun_fact FROM animals';
 $stmt = $pdo->query($sql);
 ?>
 
@@ -112,6 +115,9 @@ $stmt = $pdo->query($sql);
                                     <th>Name</th>
                                     <th>Scientific Name</th>
                                     <th>Habitat</th>
+                                    <th>Diet</th>
+                                    <th>Conservation Status</th>
+                                    <th>Fun Fact</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -122,6 +128,9 @@ $stmt = $pdo->query($sql);
                                     <td><?php echo htmlspecialchars($row['name']); ?></td>
                                     <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
                                     <td><?php echo htmlspecialchars($row['habitat']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['diet']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['conservation_status']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['fun_fact']); ?></td>
                                     <td>
                                         <form action="index.php" method="post" style="display:inline;">
                                             <input type="hidden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
@@ -147,9 +156,12 @@ $stmt = $pdo->query($sql);
             <thead>
                 <tr>
                     <th>animal_id</th>
-                    <th>name</th>
-                    <th>scientific_name</th>
-                    <th>habitat</th>
+                    <th>Name</th>
+                    <th>Scientific Name</th>
+                    <th>Habitat</th>
+                    <th>Diet</th>
+                    <th>Conservation Status</th>
+                    <th>Fun Fact</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -160,6 +172,9 @@ $stmt = $pdo->query($sql);
                     <td><?php echo htmlspecialchars($row['name']); ?></td>
                     <td><?php echo htmlspecialchars($row['scientific_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['habitat']); ?></td>
+                    <td><?php echo htmlspecialchars($row['diet']); ?></td>
+                    <td><?php echo htmlspecialchars($row['conservation_status']); ?></td>
+                    <td><?php echo htmlspecialchars($row['fun_fact']); ?></td>
                     <td>
                         <form action="index.php" method="post" style="display:inline;">
                             <input type="hanimal_idden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
@@ -173,21 +188,38 @@ $stmt = $pdo->query($sql);
     </div>
 
     <!-- Form section with container -->
-    <div class="form-container">
-        <h2>Add An Animal</h2>
-        <form action="crud.php" method="post">
-            <label for="name">name:</label>
-            <input type="text" id="name" name="name" required>
-            <br><br>
-            <label for="scientific_name">Sizes:</label>
-            <input type="text" id="scientific_name" name="scientific_name" required>
-            <br><br>
-            <label for="habitat">habitat:</label>
-            <input type="text" id="habitat" name="habitat" required>
-            <br><br>
-            <input type="submit" value="Add Animal to Archive">
+    <div class="request-container">
+        <h1>Add An Animal</h1>
+        <img src="Animal Archive Logo.png" width= "75px" height = "75px">
+        <form action="crud.php" method="post" class = "login-form">
+        <div class = "request-row">
+            <input placeholder = "Name" class = "form-input" type="text" id="name" name="name" required>
+            <label class = "form-label" for="name">Name:</label>
+        </div>
+        <div class = "request-row">
+            <input placeholder = "Scientific Name" class = "form-input" type="text" id="scientific_name" name="scientific_name" required>
+            <label class = "form-label" for="scientific_name">Scientific Name:</label>
+        </div>
+        <div class = "request-row">
+            <input placeholder = "Habitat" class = "form-input" type="text" id="habitat" name="habitat" required>
+            <label class = "form-label" for="habitat">Habitat:</label>
+        </div>
+        <div class = "request-row">
+            <input placeholder = "Diet" class = "form-input" type="text" id="diet" name="diet" required>
+            <label class = "form-label" for="diet">Diet:</label>
+        </div>
+        <div class = "request-row">
+            <input placeholder = "Conservation Status" class = "form-input" type="text" id="conservation_status" name="conservation_status" required>
+            <label class = "form-label" for="conservation_status">Conservation Status:</label>
+        </div>
+        <div class = "request-row">
+            <input placeholder = "" class = "form-input" type="text" id="fun_fact" name="fun_fact" required>
+            <label class = "form-label" for="fun_fact">Fun Fact:</label>
+        </div>
+            <input class = "submit-button" type="submit" value="Add Animal to Archive">
         </form>
     </div>
+    <br><br>
     <footer>
         <div class = "footer-container">
             <ul class = "footer-list">

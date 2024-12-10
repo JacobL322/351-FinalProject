@@ -51,11 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $update_stmt = $pdo->prepare($update_sql);
     $update_stmt->execute([
         'name' => $name,
-        'scientific_name' => $name,
-        'habitat' => $name,
-        'diet' => $name,
-        'conservation_status' => $name,
-        'fun_fact' => $fun_fact
+        'scientific_name' => $scientific_name,
+        'habitat' => $habitat,
+        'diet' => $diet,
+        'conservation_status' => $conservation_status,
+        'fun_fact' => $fun_fact,
+        'animal_id' => $animal_id
     ]);
 
     header('location: crud.php');
@@ -82,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h1>Update Animal</h1>
             <img src="Animal Archive Logo.png" width= "75px" height = "75px">
             <div class = "request-row">
-                <input placeholder = "Name:" class = "form-input" type="text" id="name" name="name" value="<?php echo htmlspecialchars($row['name']); ?>" required>
+                <input placeholder = "Name:" class = "form-input" type="text" id="name" name="name" value="<?php echo htmlspecialchars($animal['name']); ?>" required>
                 <label class = "form-label" for="name">Name:</label>
             </div>
             <div class = "request-row">
@@ -105,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input placeholder = "Fun Fact:" class = "form-input" type="text" id="fun_fact" name="fun_fact" value="<?php echo htmlspecialchars($animal['fun_fact']); ?>" required>
                 <label class = "form-label" for="fun_fact">Fun Fact:</label>
             </div>
-            <button type="submit" name="submit" class = "submit-button">Submit</button>
+            <button type="submit" name="submit" class = "submit-button">Update</button>
         </form>
     </div>
 </body>

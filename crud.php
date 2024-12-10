@@ -129,7 +129,7 @@ $stmt = $pdo->query($sql);
                                     <td class = "crud-td"><?php echo htmlspecialchars($row['conservation_status']); ?></td>
                                     <td class = "crud-td"><?php echo htmlspecialchars($row['fun_fact']); ?></td>
                                     <td class = "crud-td">
-                                        <form action="update.php" method="get" style="display:inline;">
+                                    <form action="update.php" method="get" style="display:inline;">
                                             <input type="hidden" name="animal_id" value="<?php echo $row['animal_id']; ?>">
                                             <input class = "crud-button" type="submit" value="Update">
                                         </form>
@@ -191,6 +191,7 @@ $stmt = $pdo->query($sql);
         </table>
         <br>
     </div>
+    <script src = "gallery.js"></script>
 
     <!-- Form section with container -->
     <div class="request-container">

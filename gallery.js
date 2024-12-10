@@ -29,3 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapper.style.transform = `translateX(${offset}px)`;
     }
 });
+
+function sortTable(column) {
+    const table = document.getElementById("animalTable");
+    const rows = Array.from(table.tBodies[0].rows); // Get all rows in tbody
+    const columnIndex = Array.from(table.tHead.rows[0].cells).findIndex(cell => cell.dataset.column === column);
+
+    const isAscending = table.dataset.sortOrder !== "asc"; // Toggle sort order
+    table.dataset.sortOrder = isAscending ? "asc" : "desc";
+
+    rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim().toLowerCase();
+        const bText = b.cells[columnIndex].textContent.trim().toLowerCase();
+        return isAscending ? aText.localeCompare(bText) : bText.localeCompare(aText);
+    });
+
+    // Append sorted rows back to the table body
+    rows.forEach(row => table.tBodies[0].appendChild(row));
+}

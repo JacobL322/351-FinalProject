@@ -56,10 +56,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'diet' => $name,
         'conservation_status' => $name,
         'fun_fact' => $fun_fact
+    ]);
 
-
-]);
-
+    header('location: crud.php');
+    exit;
 }
 ?>
+
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Resources - The Animal Archive</title>
+</head>
+
+<body>
+
+
+
+
+
+
+</body>
 

@@ -154,15 +154,15 @@ $stmt = $pdo->query($sql);
     <div class="table-container">
         <br>
         <h1 style = "text-align: center">Full Archive</h1>
-        <table class="half-width-left-align">
+        <table class="half-width-left-align" id = "animalTable">
             <thead>
                 <tr class = "crud-tr">
-                    <th class = "crud-th">Name</th>
-                    <th class = "crud-th">Scientific Name</th>
-                    <th class = "crud-th">Habitat</th>
-                    <th class = "crud-th">Diet</th>
-                    <th class = "crud-th">Conservation Status</th>
-                    <th class = "crud-th">Fun Fact</th>
+                    <th class = "crud-th" data-column = "name" onclick = "sortTable('name')">Name</th>
+                    <th class = "crud-th" data-column = "scientific_name" onclick = "sortTable('scientific_name')">Scientific Name</th>
+                    <th class = "crud-th" data-column = "habitat" onclick = "sortTable('habitat')">Habitat</th>
+                    <th class = "crud-th" data-column = "diet" onclick = "sortTable('diet')">Diet</th>
+                    <th class = "crud-th" data-column = "conservation_status" onclick = "sortTable('conservation_status')">Conservation Status</th>
+                    <th class = "crud-th" data-column = "fun_fact" onclick = "sortTable('fun_fact')">Fun Fact</th>
                     <th class = "crud-th">Actions</th>
                 </tr>
             </thead>

@@ -70,7 +70,7 @@ h1, h2 {
     border: 2px solid #333
 }
 
-.crud-tr:hover{
+.crud-th:hover{
     cursor: pointer;
     background-color:#c1a872;
 }

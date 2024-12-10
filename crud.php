@@ -96,7 +96,7 @@ $stmt = $pdo->query($sql);
         <div class="hero-search">
             <form action="" method="GET" class="search-form">
                 <div class = "search-row">
-                    <input class = "form-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
+                    <input class = "search-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
                     <label class = "form-label" for="search">Animal Name:</label>
                     <button class = "hero-button" type="submit"><img class = "search-image" src = "Search.png"></button>
                 </div>

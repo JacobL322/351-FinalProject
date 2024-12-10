@@ -88,10 +88,6 @@ h1, h2 {
     border-right: 1px solid #333
 }
 
-.crud-td:hover{
-    background-color:#D0C59A;
-}
-
 .crud-button{
     gap:5px;
     align-items: center;

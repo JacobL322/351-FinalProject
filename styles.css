@@ -476,6 +476,11 @@ h1, h2 {
 
 .search-results {
     margin-top: 20px;
+    margin-left:20px;
+    color: #333;
+    background-color: #D0C59A;
+    border:2px solid #C8B282;
+    border-radius:1rem;
 }
 
 .search-results h3 {

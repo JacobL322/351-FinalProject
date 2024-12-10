@@ -97,15 +97,16 @@ $stmt = $pdo->query($sql);
             <h1 style = "text-align:center">Search for Animal</h1>
             <form action="" method="GET" class="search-form">
                 <div class = "request-row">
-                    <label class = "form-label" for="search">Animal Name</label>
                     <input class = "form-input" placeholder = "Animal Name" type="text" id="search" name="search" required>
-        </div>
+                    <label class = "form-label" for="search">Animal Name:</label>
+                </div>
                 <input class = "submit-button" type="submit" value="Search">
             </form>
+        </div>
             
             <?php if (isset($_GET['search'])): ?>
                 <div class="search-results">
-                    <h3>Search Results</h3>
+                    <h1 style = "text-align:center">Results</h1>
                     <?php if ($search_results && count($search_results) > 0): ?>
                         <table>
                             <thead>
@@ -131,9 +132,9 @@ $stmt = $pdo->query($sql);
                                     <td><?php echo htmlspecialchars($row['conservation_status']); ?></td>
                                     <td><?php echo htmlspecialchars($row['fun_fact']); ?></td>
                                     <td>
-                                        <form action="index.php" method="post" style="display:inline;">
+                                        <form action="crud.php" method="post" style="display:inline;">
                                             <input type="hidden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
-                                            <input type="submit" value="Remove">
+                                            <input class = "submit-button" type="submit" value="Remove">
                                         </form>
                                     </td>
                                 </tr>
@@ -177,7 +178,7 @@ $stmt = $pdo->query($sql);
                     <td>
                         <form action="index.php" method="post" style="display:inline;">
                             <input type="hanimal_idden" name="delete_animal_id" value="<?php echo $row['animal_id']; ?>">
-                            <input type="submit" value="Remove">
+                            <input class = "submit-button" type="submit" value="Remove">
                         </form>
                     </td>
                 </tr>

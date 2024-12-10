@@ -46,9 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conservation_status = htmlspecialchars($_POST['conservation_status']);
     $fun_fact = htmlspecialchars($_POST['fun_fact']);
 
+    //Update
     $update_sql = 'UPDATE animals SET name = :name, scientific_name = :scientific_name, habitat = :habitat, diet = :diet, conservation_status = :conservation_status, fun_fact = :fun_fact WHERE animal_id = :animal_id';
     $update_stmt = $pdo->prepare($update_sql);
     $update_stmt->execute([
+        'name' => $name,
+        'scientific_name' => $name,
+        'habitat' => $name,
+        'diet' => $name,
+        'conservation_status' => $name,
+        'fun_fact' => $fun_fact
 
 
 ]);

@@ -72,15 +72,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Resources - The Animal Archive</title>
+    <title>Update - The Animal Archive</title>
 </head>
 
 <body>
 
-
-
-
-
-
+    <div class="request-container">
+        <form method="POST" action="" class="login-form">
+            <h1>Update Animal</h1>
+            <img src="Animal Archive Logo.png" width= "75px" height = "75px">
+            <div class = "request-row">
+                <input placeholder = "Name:" class = "form-input" type="text" id="name" name="name" value="<?php echo htmlspecialchars($row['name']); ?>" required>
+                <label class = "form-label" for="name">Name:</label>
+            </div>
+            <div class = "request-row">
+                <input placeholder = "Scientific Name" class = "form-input" type="text" id="scientific_name" name="scientific_name" value="<?php echo htmlspecialchars($animal['scientific_name']); ?>" required>
+                <label class = "form-label" for="scientific_name">Scientific Name:</label>
+            </div>
+            <div class = "request-row">
+                <input placeholder = "Habitat:" class = "form-input" type="text" id="habitat" name="habitat" value="<?php echo htmlspecialchars($animal['habitat']); ?>" required>
+                <label class = "form-label" for="habitat">Habitat:</label>
+            </div>
+            <div class = "request-row">
+                <input placeholder = "Diet:" class = "form-input" type="text" id="diet" name="diet" value="<?php echo htmlspecialchars($animal['diet']); ?>" required>
+                <label class = "form-label" for="diet">Diet:</label>
+            </div>
+            <div class = "request-row">
+                <input placeholder = "Conservation Status:" class = "form-input" type="text" id="conservation_status" name="conservation_status" value="<?php echo htmlspecialchars($animal['conservation_status']); ?>" required>
+                <label class = "form-label" for="conservation_status">Conservation Status:</label>
+            </div>
+            <div class = "request-row">
+                <input placeholder = "Fun Fact:" class = "form-input" type="text" id="fun_fact" name="fun_fact" value="<?php echo htmlspecialchars($animal['fun_fact']); ?>" required>
+                <label class = "form-label" for="fun_fact">Fun Fact:</label>
+            </div>
+            <button type="submit" name="submit" class = "submit-button">Submit</button>
+        </form>
+    </div>
 </body>
+</html>
 

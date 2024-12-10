@@ -291,15 +291,6 @@ h1, h2 {
 }
 
 
-.resource-wrapper:hover .card-caption{
-    transform:translateY(0);
-}
-
-.resource-wrapper:hover{
-    transform: scale(1.02);
-    opacity:0.7;
-}
-
 /* Image Gallery Styles
 --------------------
 */
@@ -584,6 +575,7 @@ h1, h2 {
     background-color: #D0C59A;
     border:2px solid #C8B282;
     border-radius:1rem;
+    padding:1rem;
 }
 
 

@@ -27,3 +27,10 @@ try {
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
+
+$animal_id = (int)$_GET['animal_id'];
+
+$sql = 'SELECT * FROM animals WHERE animal_id = :animal_id';
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['animal_id' => $animal_id]);
+$animal = $stmt->fetch();

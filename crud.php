@@ -91,7 +91,7 @@ $stmt = $pdo->query($sql);
         </header>
 
         
-        <!-- Search moved to hero section -->
+        <!-- Search Bar for Animal Table -->
          <br><br>
         <div class="hero-search">
             <form action="" method="GET" class="search-form">
@@ -150,7 +150,7 @@ $stmt = $pdo->query($sql);
         </div>
     </div>
 
-    <!-- Table section with container -->
+    <!-- Animal Archive Table -->
     <div class="table-container">
         <br>
         <h1 style = "text-align: center">Full Archive</h1>
@@ -193,7 +193,7 @@ $stmt = $pdo->query($sql);
     </div>
     <script src = "gallery.js"></script>
 
-    <!-- Form section with container -->
+    <!-- Add Animal Form -->
     <div class="request-container">
         <h1>Add An Animal</h1>
         <img src="Animal Archive Logo.png" width= "75px" height = "75px">

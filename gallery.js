@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector(".gallery-button.next");
 
     let currentIndex = 0; // To track the current position
-    const cardWidth = 607; // Width of each card + margin (adjust if necessary)
+    const cardWidth = 607; // Width of each card + margin
     const visibleCards = Math.floor(document.querySelector(".image-gallery").offsetWidth / cardWidth);
     const totalCards = document.querySelectorAll(".image-card").length;
 
@@ -24,12 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    //Visibily Moves Cards
     function updateGallery() {
         const offset = currentIndex * cardWidth * -1; // Calculate the offset
         wrapper.style.transform = `translateX(${offset}px)`;
     }
 });
 
+
+//CRUD Sort
 function sortTable(column) {
     const table = document.getElementById("animalTable");
     const rows = Array.from(table.tBodies[0].rows); // Get all rows in tbody
